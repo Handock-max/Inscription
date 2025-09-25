@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formation Third Eyes Co.</title>
+  <!-- Lien vers le fichier CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Page d'accueil -->
+  <div id="accueil">
+    <!-- Logo en fond flouté -->
+    <div class="logo-background">
+      <img src="[CHEMIN_VERS_LOGO]" alt="Logo Third Eyes Co.">
+    </div>
+
+    <!-- Cadre central -->
+    <div class="center-box">
+      <h1>Formation Data & IA</h1>
+      <p>Montez en compétence rapidement avec nos modules pratiques et interactifs</p>
+      <!-- Bouton clignotant pour s'inscrire -->
+      <button id="btnInscription" class="blink">Je m'inscris</button>
+    </div>
+  </div>
+
+  <!-- Formulaire paginé (initialement caché) -->
+  <div id="formulaire" class="hidden">
+    <div class="center-box">
+      <h2>Inscription à la formation</h2>
+      <form id="registrationForm">
+        <!-- Page 1 : Informations personnelles -->
+        <div class="form-page" data-page="1">
+          <label>Nom complet *</label>
+          <input type="text" id="nom_complet" required>
+          
+          <label>Email *</label>
+          <input type="email" id="email" required>
+          
+          <label>Téléphone *</label>
+          <input type="text" id="telephone" required>
+          
+          <label>Ville *</label>
+          <input type="text" id="ville" required>
+
+          <button type="button" class="next">Suivant →</button>
+        </div>
+
+        <!-- Page 2 : Sélection de la formation -->
+        <div class="form-page hidden" data-page="2">
+          <label>Type de formation *</label>
+          <select id="type_formation" required>
+            <option value="">--Sélectionner--</option>
+            <option value="individuelle">Formations individuelles</option>
+            <option value="pack">Pack combiné</option>
+            <option value="cycle">Cycle complet</option>
+          </select>
+
+          <div id="detailsFormation"></div>
+
+          <button type="button" class="prev">← Précédent</button>
+          <button type="button" class="next">Suivant →</button>
+        </div>
+
+        <!-- Page 3 : Modalités et motivations -->
+        <div class="form-page hidden" data-page="3">
+          <label>Mode de participation *</label>
+          <select id="mode_participation" required>
+            <option value="">--Sélectionner--</option>
+            <option value="en ligne">En ligne</option>
+            <option value="en présentiel">En présentiel</option>
+            <option value="les deux">Les deux</option>
+          </select>
+
+          <label>Motivation / Objectif</label>
+          <textarea id="motivation" rows="3"></textarea>
+
+          <label>Centres d'intérêt (choix multiples)</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" value="Data Analysis"> Data Analysis</label>
+            <label><input type="checkbox" value="Data Visualization"> Data Visualization</label>
+            <label><input type="checkbox" value="Business Intelligence"> Business Intelligence</label>
+            <label><input type="checkbox" value="Intelligence Artificielle"> Intelligence Artificielle</label>
+            <label><input type="checkbox" value="Storytelling"> Storytelling</label>
+          </div>
+
+          <button type="button" class="prev">← Précédent</button>
+          <button type="button" class="next">Suivant →</button>
+        </div>
+
+        <!-- Page 4 : Confirmation / soumission -->
+        <div class="form-page hidden" data-page="4">
+          <p>Vérifiez vos informations avant de soumettre.</p>
+          <button type="button" class="prev">← Précédent</button>
+          <button type="submit">Soumettre</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Message de remerciement après soumission -->
+  <div id="merci" class="hidden">
+    <div class="center-box">
+      <h2>Merci pour votre inscription !</h2>
+      <p>Nous vous contacterons très prochainement.</p>
+      <button id="btnContact">Nous contacter</button>
+    </div>
+  </div>
+
+  <!-- Lien vers le fichier JS -->
+  <script src="script.js"></script>
+</body>
+</html>
